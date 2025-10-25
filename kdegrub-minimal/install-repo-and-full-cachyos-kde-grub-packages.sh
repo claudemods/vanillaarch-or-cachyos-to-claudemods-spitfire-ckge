@@ -1368,9 +1368,9 @@ sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegru
 print_status "GRUB configuration copied"
 
 print_info "Generating new GRUB configuration..."
-sudo cp vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/10_linux /etc/grub.d
-sudo cp vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/grub.cfg /boot/grub
-sudo cp -r vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/cachyos /usr/share/grub/themes
+sudo cp /home/$USER//home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/10_linux /etc/grub.d
+sudo cp /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/grub.cfg /boot/grub
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/cachyos /usr/share/grub/themes
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 print_status "GRUB configuration updated"
 
