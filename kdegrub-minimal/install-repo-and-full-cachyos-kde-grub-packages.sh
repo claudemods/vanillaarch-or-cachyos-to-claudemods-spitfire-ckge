@@ -1362,6 +1362,8 @@ print_status "Package installation completed"
 
 # Step 3: System Configuration
 print_section "Step 3: System Configuration"
+echo 'blacklist ntfs3' | sudo tee /etc/modprobe.d/disable-ntfs3.conf >/dev/null 2>&1
+sudo chmod 4755 /usr/lib/spice-client-glib-usb-acl-helper
 
 print_info "Configuring GRUB bootloader..."
 sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/grub /etc/default
