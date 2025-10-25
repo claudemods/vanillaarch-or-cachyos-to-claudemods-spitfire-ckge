@@ -1391,7 +1391,7 @@ cd /home/$USER && wget --show-progress --no-check-certificate 'https://drive.use
 cd /home/$USER && mv download* /home/$USER/appimages.zip >/dev/null 2>&1
 cd /home/$USER && unzip appimages.zip -d /home/$USER/apps
 sudo mkdir /home/$USER/.local/bin
-cd /home/$USER/apps && sudo unzip symlinks.zip -d /home/$USER/.local/bin && sudo unzip bauh.zip -d /home/$USER/.local/share/ && sudo unzip arch-systemtools.zip /opt && sudo unzip applications -d /home/$USER/.local/share/ >/dev/null 2>&1
+cd /home/$USER/apps && sudo unzip symlinks.zip -d /home/$USER/.local/bin && sudo unzip bauh.zip -d /home/$USER/.local/share/ && sudo unzip Arch-Systemtool.zip /opt && sudo unzip applications -d /home/$USER/.local/share/ >/dev/null 2>&1
 sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/installspitfiretheme.sh
 sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/start.sh
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && ./installspitfiretheme.sh
