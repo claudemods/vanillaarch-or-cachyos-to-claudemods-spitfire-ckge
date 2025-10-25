@@ -175,7 +175,7 @@ install_backup() {
     cachyos-hello > /dev/null 2>&1
     qdbus6 org.kde.KWin /KWin reconfigure
     kquitapp6 plasmashell
-    cd /home/$USER/vanillaarch-to-cachyos/install-fullkde-grub && ./start.sh > /dev/null 2>&1
+    cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && ./start.sh > /dev/null 2>&1
     LOG_TEXT+="✓ KDE configuration applied successfully\n"
 }
 
