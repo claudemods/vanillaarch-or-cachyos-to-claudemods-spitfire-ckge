@@ -1,3 +1,3 @@
 #!/bin/bash
 nohup /usr/bin/plasmashell
-sudo rm -rf /home/$USER/vanillaarch-to-cachyos
+sudo rm -rf /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge
