@@ -1,0 +1,28 @@
+{
+  "KPackageStructure": "Plasma/LookAndFeel",
+  "KPlugin": {
+    "Authors": [
+      {
+        "Email": "claudemods101@gmail.com",
+        "Name": "aaron dsouza"
+      },
+      {
+        "Email": "",
+        "Name": ""
+      },
+      {
+        "Email": "",
+        "Name": ""
+      }
+    ],
+    "Category": "",
+    "Description": "spitfire loading screen",
+    "Id": "spitfiresplash",
+    "License": "GPLv3",
+    "Name": "spitfiresplash",
+    "Website": "https://github.com/CCM"
+  },
+  "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
+  "X-Plasma-APIVersion": "2",
+  "X-Plasma-MainScript": "default"
+}
