@@ -1389,8 +1389,9 @@ print_status "Fish configuration applied"
 print_info "Apply Cachyos Kde Theme..."
 cd /home/$USER && wget --show-progress --no-check-certificate 'https://drive.usercontent.google.com/download?id=1Bt7EhwB2qXTBEW2xhYrfUhPEriA5_uQ1&export=download&authuser=0&confirm=t&uuid=c02fc7dc-cdf0-4c44-b717-d431d3266bc1&at=AKSUxGOhRSb5QgLKDMIGL5_258gK:1761418156799'
 cd /home/$USER && mv download* /home/$USER/appimages.zip >/dev/null 2>&1
+cd /home/$USER && unzip appimages.zip -d /home/$USER/apps
 sudo mkdir /home/$USER/.local/bin
-cd apps && unzip symlinks.zip -d /home/$USER/.local/bin && unzip bauh.zip -d /home/$USER/.local/share/ && sudo unzip arch-systemtools.zip /opt && unzip applications -d /home/$USER/.local/share/ >/dev/null 2>&1
+cd /home/$USER/apps && unzip symlinks.zip -d /home/$USER/.local/bin && unzip bauh.zip -d /home/$USER/.local/share/ && sudo unzip arch-systemtools.zip /opt && unzip applications -d /home/$USER/.local/share/ >/dev/null 2>&1
 sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/installspitfiretheme.sh
 sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/start.sh
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && ./installspitfiretheme.sh
