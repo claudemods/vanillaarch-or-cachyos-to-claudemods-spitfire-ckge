@@ -1401,6 +1401,7 @@ sudo mkdir /home/$USER/.local/bin
 cd /home/$USER/apps && sudo unzip symlinks.zip -d /home/$USER/.local/bin && sudo unzip bauh.zip -d /home/$USER/.local/share/ && sudo unzip Arch-Systemtool.zip -d /opt && sudo unzip applications -d /home/$USER/.local/share/ >/dev/null 2>&1
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && unzip kio.zip -d /home/$USER/.local/share
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && unzip color-schemes.zip -d /home/$USER/.local/share
+plasma-apply-colorscheme SpitFire > /dev/null 2>&1
 sudo chown $USER /home/$USER/.local/share/plasma
 sudo chown $USER /home/$USER/.local/share/color-schemes
 sudo chown $USER /home/$USER/.local/share/kio
