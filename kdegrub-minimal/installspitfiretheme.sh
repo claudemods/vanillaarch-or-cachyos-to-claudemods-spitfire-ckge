@@ -172,6 +172,7 @@ install_backup() {
 
     LOG_TEXT+="Applying KDE configurations...\n"
     plasma-apply-wallpaperimage /opt/Arch-Systemtool/systemtool-extras/SpitFire/spitfire.png > /dev/null 2>&1
+    plasma-apply-colorscheme SpitFire > /dev/null 2>&1
     cachyos-hello > /dev/null 2>&1
     qdbus6 org.kde.KWin /KWin reconfigure
     kquitapp6 plasmashell
