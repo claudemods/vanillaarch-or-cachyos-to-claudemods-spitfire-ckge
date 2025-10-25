@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=DNS Changer
+Exec="/home/$USER/.local/share/bauh/appimage/installed/dns/DNS-Changer-linux-x86_64-2.3.5.AppImage"
+Terminal=false
+Type=Application
+Icon=/home/$USER/.local/share/bauh/appimage/installed/dns/logo.png
+StartupWMClass=DNS Changer
+X-AppImage-Version=2.3.5
+Comment=DNS Changer for Windows, Mac and Linux operating systems
+Categories=Utilities;

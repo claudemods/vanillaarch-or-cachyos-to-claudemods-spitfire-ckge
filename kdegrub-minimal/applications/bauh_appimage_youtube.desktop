@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=youtube appimage
+Comment="youtube appimage"
+Exec="/home/$USER/.local/share/bauh/appimage/installed/youtube/youtube.appimage"
+Icon=/home/$USER/.local/share/bauh/appimage/installed/youtube/logo.png
+Terminal=false
+StartupWMClass=youtube appimage
+Type=Application
+Categories=Network;
+MimeType=x-scheme-handler/tg;
+Keywords=
+SingleMainWindow=true
+X-GNOME-UsesNotifications=true
+X-GNOME-SingleWindow=true
+Path=/usr/bin

@@ -1,0 +1,22 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Comment[en_GB]=
+Comment=
+Comment[en_US]=
+Exec="/home/$USER/.local/share/bauh/appimage/installed/apexusbcreator/ApexUsbCreator-Arch-x86-64.appimage"
+GenericName[en_GB]=ApexUsbCreator
+GenericName=ApexUsbCreator
+GenericName[en_US]=ApexUsbCreator
+Icon=/home/spitfire/.local/share/bauh/appimage/installed/apexusbcreator/logo.png
+MimeType=
+Name[en_GB]=ApexUsbCreator
+Name=ApexUsbCreator
+Name[en_US]=ApexUsbCreator
+Path=/usr/bin
+PrefersNonDefaultGPU=false
+StartupNotify=true
+Terminal=false
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+Categories=Utility;
