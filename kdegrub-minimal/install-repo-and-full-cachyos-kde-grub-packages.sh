@@ -1364,6 +1364,7 @@ print_status "Package installation completed"
 print_section "Step 3: System Configuration"
 echo 'blacklist ntfs3' | sudo tee /etc/modprobe.d/disable-ntfs3.conf >/dev/null 2>&1
 sudo chmod 4755 /usr/lib/spice-client-glib-usb-acl-helper
+sudo pacman -R firefox
 
 
 print_info "Configuring GRUB bootloader..."
@@ -1407,6 +1408,9 @@ sudo chown $USER /home/$USER/.local/share/kio
 cd -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && sudo unzip SpitFireLogin.zip -d /usr/share/sddm/themes
 cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/plasma_workspace.notifyrc /home/$USER/.local/.config
 cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/plasma-org.kde.plasma.desktop-appletsrc /home/$USER/.local/.config
+cd -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/kwinrc /home/$USER/.local/.config
+cd -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/ksplashrc /home/$USER/.local/.config
+cd -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/ksmserverrc /home/$USER/.local/.config
 sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/kde_settings.conf /etc/sddm.conf.d
 sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/installspitfiretheme.sh
 sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/start.sh
