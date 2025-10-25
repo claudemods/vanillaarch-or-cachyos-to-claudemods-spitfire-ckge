@@ -1365,6 +1365,7 @@ print_section "Step 3: System Configuration"
 echo 'blacklist ntfs3' | sudo tee /etc/modprobe.d/disable-ntfs3.conf >/dev/null 2>&1
 sudo chmod 4755 /usr/lib/spice-client-glib-usb-acl-helper
 
+
 print_info "Configuring GRUB bootloader..."
 sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/grub /etc/default
 print_status "GRUB configuration copied"
@@ -1398,6 +1399,12 @@ cd /home/$USER && mv download* /home/$USER/appimages.zip >/dev/null 2>&1
 cd /home/$USER && unzip appimages.zip -d /home/$USER/apps
 sudo mkdir /home/$USER/.local/bin
 cd /home/$USER/apps && sudo unzip symlinks.zip -d /home/$USER/.local/bin && sudo unzip bauh.zip -d /home/$USER/.local/share/ && sudo unzip Arch-Systemtool.zip -d /opt && sudo unzip applications -d /home/$USER/.local/share/ >/dev/null 2>&1
+cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && unzip kio.zip -d /home/spitfire/.local/share
+cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && unzip color-schemes.zip -d /home/spitfire/.local/share
+sudo chown $USER /home/spitfire/.local/share/plasma
+sudo chown $USER /home/spitfire/.local/share/color-schemes
+sudo chown $USER /home/spitfire/.local/share/kio
+cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && unzip SpitFireLogin.zip -d /usr/share/sddm/themes
 sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/installspitfiretheme.sh
 sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/start.sh
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && ./installspitfiretheme.sh
