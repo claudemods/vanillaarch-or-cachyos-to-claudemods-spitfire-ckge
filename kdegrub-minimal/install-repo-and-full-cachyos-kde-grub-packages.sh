@@ -1378,9 +1378,9 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 print_status "GRUB configuration updated"
 
 print_info "Setting Plymouth boot animation..."
-sudo cp /home/$USER//home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/term.sh /usr/local/bin
+sudo cp /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/term.sh /usr/local/bin
 sudo chmod +x /usr/local/bin/term.sh
-sudo cp /home/$USER//home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/term.service /etc/systemd/system/
+sudo cp /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/term.service /etc/systemd/system/
 sudo systemctl enable term.service >/dev/null 2>&1
 sudo plymouth-set-default-theme -R cachyos-bootanimation
 print_status "Plymouth theme configured"
@@ -1405,9 +1405,9 @@ sudo chown $USER /home/$USER/.local/share/plasma
 sudo chown $USER /home/$USER/.local/share/color-schemes
 sudo chown $USER /home/$USER/.local/share/kio
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && sudo unzip SpitFireLogin.zip -d /usr/share/sddm/themes
-cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && cp plasma_workspace.notifyrc /home/$USER/.local/.config
-cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && sudo cp plasma-org.kde.plasma.desktop-appletsrc /home/$USER/.local/.config
-cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && cp kde_settings.conf /etc/sddm.conf.d
+cp /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/plasma_workspace.notifyrc /home/$USER/.local/.config
+cp /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/plasma-org.kde.plasma.desktop-appletsrc /home/$USER/.local/.config
+sudo cp /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/kde_settings.conf /etc/sddm.conf.d
 sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/installspitfiretheme.sh
 sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/start.sh
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && ./installspitfiretheme.sh
