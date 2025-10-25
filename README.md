@@ -5,4 +5,6 @@ few commands need adding infact there are only 2
 
 also need to some how get my menus favourited apps
 
+and also need to some how change the login screen to mine and some how set my sounds
+
 but my theme my apps and everything else basically installs fine now
