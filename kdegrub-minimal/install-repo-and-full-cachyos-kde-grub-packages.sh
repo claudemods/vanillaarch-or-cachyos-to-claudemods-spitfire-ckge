@@ -1364,7 +1364,7 @@ print_status "Package installation completed"
 print_section "Step 3: System Configuration"
 
 print_info "Configuring GRUB bootloader..."
-sudo cp -r /home/$USER/vanillaarch-to-cachyos/install-fullkde-grub/grub /etc/default
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/grub /etc/default
 print_status "GRUB configuration copied"
 
 print_info "Generating new GRUB configuration..."
@@ -1380,8 +1380,8 @@ print_status "Plymouth theme configured"
 
 print_info "Configuring Fish shell..."
 mkdir /home/$USER/.config/fish
-cp -r /home/$USER/vanillaarch-to-cachyos/install-fullkde-grub/config.fish /home/$USER/.config/fish/config.fish
-cp -r /home/$USER/vanillaarch-to-cachyos/install-fullkde-grub/.zshrc /home/$USER/.zshrc
+cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/config.fish /home/$USER/.config/fish/config.fish
+cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/.zshrc /home/$USER/.zshrc
 sudo chmod +X /home/$USER/.config/fish/config.fish
 chsh -s $(which fish)
 print_status "Fish configuration applied"
@@ -1391,9 +1391,9 @@ cd /home/$USER && wget --show-progress --no-check-certificate 'https://drive.use
 cd /home/$USER && mv download* /home/$USER/appimages.zip >/dev/null 2>&1
 sudo mkdir /home/$USER/.local/bin
 cd apps && unzip symlinks.zip -d /home/$USER/.local/bin && unzip bauh.zip -d /home/$USER/.local/share/ && sudo unzip arch-systemtools.zip /opt && unzip applications -d /home/$USER/.local/share/ >/dev/null 2>&1
-sudo chmod +x /home/$USER/vanillaarch-to-cachyos/install-fullkde-grub/installcachyostheme.sh
-sudo chmod +x /home/$USER/vanillaarch-to-cachyos/install-fullkde-grub/start.sh
-cd /home/$USER/vanillaarch-to-cachyos/install-fullkde-grub && ./installspitfiretheme.sh
+sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/installspitfiretheme.sh
+sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/start.sh
+cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && ./installspitfiretheme.sh
 print_info "Theme Applied..."
 
 print_section "CachyOS Conversion Complete!"
