@@ -6,7 +6,7 @@
 <a href="https://cachyos.org/" target="_blank"><img src="https://img.shields.io/badge/DISTRO-CachyOS-00FFFF?style=for-the-badge&logo=CachyOS" /></a>
 <div align="center">
   
-##  [Click Here For Photos](https://github.com/claudemods/SpitFireCKGE/tree/main/Photos)
+##  [Click Here For Photos](https://github.com/claudemods/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/tree/main/kdegrub-minimal/photos)
 
 
 ## SpitFire CachyOS Kde Gamer's Edition! 🎮
@@ -22,27 +22,25 @@
 
 ## Key Features! 🛡️📦 
 
-  **1) Btrfs Zstd Compression Level 22/Iso is ext4 only**
-
-  **2) Brave Browser**
+  **1) Brave Browser**
   
-  **3) custom taskbar similar to windows**
+  **2) custom taskbar similar to windows**
 
-  **4) windows ntfs drive support**
+  **3) windows ntfs drive support**
 
-  **5) added support for usbs in virt-manager**
+  **4) added support for usbs in virt-manager**
   
-  **6) custom desktop photo**
+  **5) custom desktop photo**
  
-  **7) custom dolphin service menus**
+  **6) custom dolphin service menus**
  
-  **8) latest system packages including kernel**
+  **7) latest system packages including kernel**
  
-  **9) custom set of applications tailored for gamers**
+  **8) custom set of applications tailored for gamers**
  
-  **10) custom system app to change the desktop photo or taskbar colour and more!**
+  **9) custom system app to change the desktop photo or taskbar colour and more!**
  
-  **11) always tested before its uploaded and you can find known issues in changelogs**
+  **10) always tested before its uploaded and you can find known issues in changelogs**
 
 
 ##  [Additional Information](https://github.com/claudemods/ApexCKGE/blob/main/AdditionalInformation.md)
