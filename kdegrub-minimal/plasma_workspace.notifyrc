@@ -1,7 +1,0 @@
-[Event/exitkde]
-Action=Sound
-Sound=file:///opt/Arch-Systemtool/systemtool-extras/Sound set 2/gears_startup.wav
-
-[Event/startkde]
-Action=Sound
-Sound=file:///opt/Arch-Systemtool/systemtool-extras/Sound Set 3/shutdown.wav
