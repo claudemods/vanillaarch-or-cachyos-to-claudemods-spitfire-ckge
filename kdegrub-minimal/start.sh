@@ -5,3 +5,4 @@ plasma-apply-wallpaperimage -f stretch /opt/Arch-Systemtool/systemtool-extras/Sp
 plasma-apply-colorscheme SpitFire > /dev/null 2>&1
 sudo rm -rf /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge
 sudo rm -rf /home/$USER/appimages.zip
+sudo rm -rf /home/$USER/apps
