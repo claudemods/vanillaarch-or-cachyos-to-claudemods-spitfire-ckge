@@ -1,8 +1,6 @@
 # arch-to-cachyos-claudemods-spitfire-ckge
-most of this is built its 95% now 
+most of this is built its 97% now 
 
-need to some how get my menus favourited apps to work
+need to some how get my menus favourited apps to work from my list
 
-and also need to set application style and cursor style
-
-but my theme my apps and everything else basically installs fine now after many tests
+but my theme my apps and everything else installs fine now after many tests
