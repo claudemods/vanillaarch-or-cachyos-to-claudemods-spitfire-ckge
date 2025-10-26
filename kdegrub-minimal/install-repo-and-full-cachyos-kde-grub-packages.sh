@@ -1410,7 +1410,7 @@ sudo chown $USER /home/$USER/.local/share/kio
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && sudo unzip SpitFireLogin.zip -d /usr/share/sddm/themes
 sudo cp /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/aurorae /usr/share/kwin
 sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/kde_settings.conf /etc/sddm.conf.d
-cp /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/autostart /home/$USER/.local/.config
+unzip /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/autostart.zip -d /home/$USER/.config
 sudo chmod +x /home/$USER/.local/.config/autostart
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && unzip theme.zip -d /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal
 plasma-apply-colorscheme SpitFire > /dev/null 2>&1
