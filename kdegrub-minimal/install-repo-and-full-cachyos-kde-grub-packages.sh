@@ -1408,7 +1408,6 @@ sudo chown $USER /home/$USER/.local/share/plasma
 sudo chown $USER /home/$USER/.local/share/color-schemes
 sudo chown $USER /home/$USER/.local/share/kio
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && sudo unzip SpitFireLogin.zip -d /usr/share/sddm/themes
-sudo cp /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/aurorae /usr/share/kwin
 sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/kde_settings.conf /etc/sddm.conf.d
 unzip /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/autostart.zip -d /home/$USER/.config
 sudo chmod +x /home/$USER/.local/.config/autostart
@@ -1416,7 +1415,7 @@ cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minima
 plasma-apply-colorscheme SpitFire > /dev/null 2>&1
 mkdir /home/$USER/.icons
 unzip Windows10Dark.zip -d /home/$USER/.icons > /dev/null 2>&1
-cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/aurorae /home/$USER/.local
+cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/aurorae /home/$USER/.local/share
 print_info "Cachyos Hello Will Now Open Please Close To Continue..."
 cachyos-hello > /dev/null 2>&1
 print_status "Proceeding..."
