@@ -1,7 +1,0 @@
-[Daemon]
-Autolock=false
-Timeout=0
-
-[Greeter][Wallpaper][org.kde.image][General]
-Image=/opt/Arch-Systemtool/systemtool-extras/SpitFire/spitfire.png
-PreviewImage=/opt/Arch-Systemtool/systemtool-extras/SpitFire/spitfire.png
