@@ -1,5 +1,5 @@
 #!/bin/bash
-nohup /usr/bin/plasmashell > /dev/null 2>&1
+nohup /usr/bin/plasmashell > /dev/null 2>&1 &
 sleep 1
 plasma-apply-wallpaperimage -f stretch /opt/Arch-Systemtool/systemtool-extras/SpitFire/spitfire.png > /dev/null 2>&1
 plasma-apply-colorscheme SpitFire > /dev/null 2>&1
