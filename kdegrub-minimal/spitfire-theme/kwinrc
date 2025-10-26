@@ -9,8 +9,11 @@ padding=4
 [Tiling][ee38f283-70a5-434b-a001-c11e5f591a93][bf18dc4f-f181-42f5-9337-2bda92f5f23a]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][ee38f283-70a5-434b-a001-c11e5f591a93][d640cbff-9c3a-4945-9c3f-ae54941e91a7]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Xwayland]
-Scale=1
+Scale=1.5
 
 [org.kde.kdecoration2]
 NoPlugin=false
