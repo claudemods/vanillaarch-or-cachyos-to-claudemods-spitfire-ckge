@@ -1414,6 +1414,9 @@ cp /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minima
 sudo chmod +x /home/$USER/.local/.config/autostart
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && unzip theme.zip -d /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal
 plasma-apply-colorscheme SpitFire > /dev/null 2>&1
+mkdir /home/$USER/.icons
+unzip Windows10Dark.zip -d /home/$USER/.icons > /dev/null 2>&1
+cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/aurorae /home/$USER/.local
 print_info "Cachyos Hello Will Now Open Please Close To Continue..."
 cachyos-hello > /dev/null 2>&1
 print_status "Proceeding..."
