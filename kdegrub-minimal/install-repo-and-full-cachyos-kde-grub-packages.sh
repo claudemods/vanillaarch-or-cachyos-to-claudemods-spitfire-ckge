@@ -1424,7 +1424,7 @@ sudo chmod +x /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kde
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && ./installspitfiretheme.sh
 print_info "Theme Applied..."
 
-print_section "CachyOS Conversion Complete!"
+print_section "CachyOS Conversion Complete!!"
 echo -e "${GREEN}${BOLD}"
 echo "Conversion to CachyOS has been completed successfully!"
 sudo rm -rf /home/$USER/vanillaarch-to-cachyos
