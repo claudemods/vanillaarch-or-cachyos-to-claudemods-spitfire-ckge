@@ -157,10 +157,24 @@ install_backup() {
         handle_directory "$srcDir" "$destDir"
     done
 
+    # YOUR EXACT FILE LIST
     local files=(
-        "plasma-org.kde.plasma.desktop-appletsrc" "plasmarc" "plasmashellrc" "kdeglobals"
-        "kwinrc" "kwinrulesrc" "lattedockrc" "dolphinrc" "ksmserverrc" "kcminputrc"
-        "kglobalshortcutsrc" "klipperrc" "konsolerc" "kscreenlockerrc" "krunnerrc" "kcmfonts"
+        "dolphinrc"
+        "kactivitymanagerd-statsrc"
+        "kcminputrc"
+        "kde_settings.conf"
+        "kdeglobals"
+        "kglobalshortcutsrc"
+        "konsolerc"
+        "kscreenlockerrc"
+        "ksmserverrc"
+        "ksplashrc"
+        "kwinrc"
+        "plasma-org.kde.plasma.desktop-appletsrc"
+        "plasma_workspace.notifyrc"
+        "plasmarc"
+        "plasmashellrc"
+        "powerdevilrc"
     )
 
     LOG_TEXT+="Installing configuration files...\n"
