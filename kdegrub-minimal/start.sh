@@ -1,3 +1,6 @@
 #!/bin/bash
-nohup /usr/bin/plasmashell
+nohup /usr/bin/plasmashell > /dev/null 2>&1
+sleep 0
+plasma-apply-wallpaperimage -f stretch /opt/Arch-Systemtool/systemtool-extras/SpitFire/spitfire.png > /dev/null 2>&1
+plasma-apply-colorscheme SpitFire > /dev/null 2>&1
 sudo rm -rf /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge
