@@ -1409,6 +1409,8 @@ sudo chown $USER /home/$USER/.local/share/color-schemes
 sudo chown $USER /home/$USER/.local/share/kio
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && sudo unzip SpitFireLogin.zip -d /usr/share/sddm/themes
 sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/kde_settings.conf /etc/sddm.conf.d
+sudo rm -rf /home/$USER/.local/share/kactivitymanagerd
+unzip /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/kactivitymanagerd.zip -d /home/$USER/.local/share
 unzip /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/autostart.zip -d /home/$USER/.config
 sudo chmod +x /home/$USER/.local/.config/autostart
 cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && unzip theme.zip -d /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal
