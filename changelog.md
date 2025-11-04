@@ -1,33 +1,21 @@
-things being testing!
+🚧 Currently Testing!
+- Custom Brave Browser Theme Integration 🎨
 
-custom brave browser theme integration
+## ⚠️ Known Issues
+- 🚫 I cannot add my favourites to menu
 
-known issues!
+## 📋 Changelog
 
-i cannot add my favourites to menu
+### v1.01 04-11-2025
+- 🎨 New terminal color: `claudemods-cyan`
+- 🔄 New custom Plymouth: `cachyos-advanced`
+- 📊 New 11 menu advanced added
 
-v1.01 04-11-2025
-
-new terminal color
-
-new plymouth
-
-new 11 menu advanced added
-
-v1.0 
-
-initial script includes:
-
-custom desktop photo
-
-custom dolphin service menus
-
-plasma theme and sounds
-
-grub/plymouth theme
-
-plasma login splash
-
-custom application list
-
-ntfs and virt-manager usb support
+### v1.0
+- 🖼️ Custom desktop photo
+- 📁 Custom dolphin service menus
+- 🌟 Plasma theme and sounds
+- 🖥️ Grub/plymouth theme
+- 🔑 Plasma login splash
+- 📱 Custom application list
+- 💾 NTFS and virt-manager usb support
