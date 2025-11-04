@@ -1390,6 +1390,7 @@ print_status "Plymouth theme configured"
 print_info "Configuring Fish shell..."
 cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/claudemods-cyan.colorscheme /home/$USER/.local/share/konsole
 cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/claudemods-cyan.profile /home/$USER/.local/share/konsole
+kwriteconfig6 --file konsolerc --group "Desktop Entry" --key "DefaultProfile" "claudemods-cyan.profile"
 mkdir /home/$USER/.config/fish
 cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/config.fish /home/$USER/.config/fish/config.fish
 cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/.zshrc /home/$USER/.zshrc
