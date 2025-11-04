@@ -55,13 +55,8 @@
   
 ## Installation Methods
 
-spitfire ckge minimal
+spitfire ckge minimal v1.01 04-11-2025
 
 ```bash
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/claudemods/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/refs/heads/main/kdegrub-minimal/install-from-github.sh)"
-
-
-
-
-
