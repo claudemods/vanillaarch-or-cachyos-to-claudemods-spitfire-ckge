@@ -21,7 +21,7 @@ cat << "EOF"
 EOF
 
 echo -e "${CYAN}"
-echo "           ClaudeMods Vanilla Arch Kde Grub to Spitfire CKGE Minimal v1.01 04-11-2025"
+echo "           claudemods Vanilla Arch Kde Grub to Spitfire CKGE Minimal v1.01 04-11-2025"
 echo -e "${NC}"
 echo "================================================================================"
 echo ""
