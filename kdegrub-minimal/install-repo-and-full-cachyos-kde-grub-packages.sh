@@ -1379,7 +1379,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 print_status "GRUB configuration updated"
 
 print_info "Setting Plymouth boot animation..."
-sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/cachyos-bootanimation /usr/share/plymouth/themes/
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/cachyos-bootanimation /usr/share/plymouth/themes/
 sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/term.sh /usr/local/bin
 sudo chmod +x /usr/local/bin/term.sh
 sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/term.service /etc/systemd/system/
