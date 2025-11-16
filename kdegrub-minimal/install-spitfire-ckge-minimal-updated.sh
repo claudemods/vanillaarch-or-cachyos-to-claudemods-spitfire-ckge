@@ -101,8 +101,8 @@ sudo pacman -R --noconfirm virt-manager
 print_status "Repository setup completed"
 
 print_section "Starting Spitfire Conversion Process"
-sudo unzip -o /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/pacman.d.zip -d /etc
-sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/pacman.conf /etc
+sudo unzip -o /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/pacman.d.zip -d /etc
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/pacman.conf /etc
 
 sudo pacman -Sy
 sudo pacman -S claudemods-desktop --noconfirm
