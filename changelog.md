@@ -1,8 +1,11 @@
-🚧 Currently Testing!
-- Custom Brave Browser Theme Integration 🎨
-
 ## ⚠️ Known Issues
-- 🚫 I cannot add my favourites to menu
+
+## 📋 Changelog
+
+### v1.02 16-11-2025
+- 📊 new script created using new methods
+- 🔄 11 menu advanced favourites fixed and brave browser extentions and theme added
+- 🎨 all features of Spitfire ckge minimal and full added and working 
 
 ## 📋 Changelog
 
