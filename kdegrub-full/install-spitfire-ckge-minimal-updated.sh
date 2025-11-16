@@ -1,0 +1,193 @@
+#!/bin/bash
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+CYAN='\033[0;36m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+BOLD='\033[1m'
+
+# ASCII Art Banner
+echo -e "${RED}"
+cat << "EOF"
+ ░█████╗░██╗░░░░░░█████╗░██╗░░░██╗██████╗░███████╗███╗░░░███╗░█████╗░██████╗░░██████╗
+ ██╔══██╗██║░░░░░██╔══██╗██║░░░██║██╔══██╗██╔════╝████╗░████║██╔══██╗██╔══██╗██╔════╝
+ ██║░░╚═╝██║░░░░░███████║██║░░░██║██║░░██║█████╗░░██╔████╔██║██║░░██║██║░░██║╚█████╗░
+ ██║░░██╗██║░░░░░██╔══██║██║░░░██║██║░░██║██╔══╝░░██║╚██╔╝██║██║░░██║██║░░██║░╚═══██╗
+ ╚█████╔╝███████╗██║░░██║╚██████╔╝██████╔╝███████╗██║░╚═╝░██║╚█████╔╝██████╔╝██████╔╝
+ ░╚════╝░╚══════╝╚═╝░░░░░░╚═════╝░╚══════╝░╚══════╝╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚═════╝░
+EOF
+
+echo -e "${CYAN}"
+echo "           claudemods Vanilla Arch Kde Grub to Spitfire CKGE Full v1.02 16-11-2025"
+echo -e "${NC}"
+echo "================================================================================"
+echo ""
+
+# Function for colored output
+print_status() {
+    echo -e "${GREEN}[✓]${NC} $1"
+}
+
+print_warning() {
+    echo -e "${YELLOW}[!]${NC} $1"
+}
+
+print_error() {
+    echo -e "${RED}[✗]${NC} $1"
+}
+
+print_info() {
+    echo -e "${CYAN}[i]${NC} $1"
+}
+
+print_section() {
+    echo -e "${BLUE}${BOLD}[=== $1 ===]${NC}"
+}
+
+# Check if running as root
+if [[ $EUID -eq 0 ]]; then
+    print_error "This script should not be run as root. Please run as regular user."
+    exit 1
+fi
+
+# Warning message
+echo -e "${YELLOW}${BOLD}"
+echo "WARNING: This script will perform major system modifications including:"
+echo "• Adding CachyOS repositories"
+echo "• Installing 1000+ packages"
+echo "• Modifying bootloader configuration"
+echo "• Changing system themes and configurations"
+echo -e "${NC}"
+echo -e "${RED}${BOLD}Ensure you have backups and understand the risks before proceeding!${NC}"
+echo ""
+
+read -p "Do you want to continue? (yes/no): " confirm
+if [[ $confirm != "yes" ]]; then
+    print_error "Installation cancelled by user."
+    exit 0
+fi
+
+# Check and remove virt-manager if installed
+print_section "Checking for virt-manager"
+if pacman -Qi virt-manager &>/dev/null; then
+    print_info "virt-manager found, removing it..."
+    sudo pacman -Rns --noconfirm virt-manager
+    print_status "virt-manager removed successfully"
+else
+    print_info "virt-manager not installed, proceeding..."
+fi
+
+print_section "Starting CachyOS Conversion Process"
+
+# Step 1: Download and setup CachyOS repositories
+print_section "Step 1: Setting up CachyOS Repositories"
+print_info "Downloading CachyOS repository package..."
+curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
+print_status "Download completed"
+
+print_info "Extracting repository files..."
+tar xvf cachyos-repo.tar.xz && cd cachyos-repo
+print_status "Extraction completed"
+
+print_info "Running CachyOS repository setup..."
+sudo ./cachyos-repo.sh
+print_status "Repository setup completed"-ft
+sudo pacman -S unzip wget iptables-nft zlib-ng-compat
+sudo pacman -R --noconfirm virt-manager
+
+print_status "Repository setup completed"
+
+print_section "Starting Spitfire Conversion Process"
+sudo unzip -o /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/pacman.d.zip -d /etc
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-apex-ckge/minimal/pacman.conf /etc
+
+sudo pacman -Sy
+sudo pacman -S claudemods-desktop-full --noconfirm
+
+
+# Step 2: Massive package installation
+print_section "Step 2: Installing Packages"
+print_info "Starting installation (this will take a while)..."
+print_info "Please be patient as this process may take 30-60 minutes..."
+
+
+print_status "Package installation completed"
+
+# Step 3: System Configuration
+print_section "Step 3: System Configuration"
+echo 'blacklist ntfs3' | sudo tee /etc/modprobe.d/disable-ntfs3.conf >/dev/null 2>&1
+sudo chmod 4755 /usr/lib/spice-client-glib-usb-acl-helper
+sudo pacman -R firefox
+
+
+print_info "Configuring GRUB bootloader..."
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/grub /etc/default
+print_status "GRUB configuration copied"
+
+print_info "Generating new GRUB configuration..."
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/10_linux /etc/grub.d
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/grub.cfg /boot/grub
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/cachyos /usr/share/grub/themes
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+print_status "GRUB configuration updated"
+
+print_info "Setting Plymouth boot animation..."
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/cachyos-bootanimation /usr/share/plymouth/themes/
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/termfull.sh /usr/local/bin
+sudo chmod +x /usr/local/bin/termfull.sh
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/termfull.service /etc/systemd/system/
+sudo systemctl enable termfull.service >/dev/null 2>&1
+sudo plymouth-set-default-theme -R cachyos-bootanimation
+print_status "Plymouth theme configured"
+
+print_info "Configuring Fish shell..."
+cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/claudemods-cyan.colorscheme /home/$USER/.local/share/konsole
+cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/claudemods-cyan.profile /home/$USER/.local/share/konsole
+cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/konsolerc /home/$USER/.config
+mkdir /home/$USER/.config/fish
+cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/config.fish /home/$USER/.config/fish/config.fish
+cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/.zshrc /home/$USER/.zshrc
+sudo chmod +X /home/$USER/.config/fish/config.fish
+chsh -s $(which fish)
+print_status "Fish configuration applied"
+
+print_info "Apply Cachyos Kde Theme..."
+sudo mkdir /etc/sddm.conf.d
+cd /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal && sudo unzip SpitFireLogin.zip -d /usr/share/sddm/themes
+sudo cp -r /home/$USER/vanillaarch-or-cachyos-to-claudemods-spitfire-ckge/kdegrub-minimal/kde_settings.conf /etc/sddm.conf.d
+cd /home/$USER && wget --show-progress --no-check-certificate --continue --tries=10 --timeout=30 --waitretry=5 https://claudemodsreloaded.co.uk/claudemods-desktop/spitfire-full.zip
+cd /home/$USER && wget --show-progress --no-check-certificate --continue --tries=10 --timeout=30 --waitretry=5 https://claudemodsreloaded.co.uk/arch-systemtool/Arch-Systemtool.zip
+sudo unzip -o /home/$USER/Arch-Systemtool.zip -d /opt
+unzip -o /home/$USER/spitfire-minimal.zip -d /home/$USER
+
+# Get the actual home directory name from /mnt/home
+home_folder=$(ls -1 /home | grep -v '^\.' | head -1)
+
+if [[ -n "$home_folder" ]]; then
+    user_places_file="/home/${home_folder}/.local/share/user-places.xbel"
+    
+    # Check if the file exists before attempting to modify it
+    if [[ -f "$user_places_file" ]]; then
+        sed -i "s/apex/${home_folder}/g" "$user_places_file"
+        echo -e "\033[32mUpdated user-places.xbel: replaced 'spitfire' with '${home_folder}'\033[0m"
+    else
+        echo -e "\033[31mError: File $user_places_file does not exist\033[0m"
+        exit 1
+    fi
+else
+    echo -e "\033[31mError: No home folder found in /mnt/home\033[0m"
+    exit 1
+fi
+
+
+print_section "Spitfire Conversion Complete!!"
+echo -e "${GREEN}${BOLD}"
+echo "Conversion to CachyOS has been completed successfully!"
+sudo rm -rf /home/$USER/vanillaarch-to-cachyos
+sudo rm -rf /home/$USER/spitfire-full.zip
+sudo rm -rf /home/$USER/Arch-Systemtool.zip
+echo "Please reboot your system to apply all changes."
+echo -e "${NC}"
